@@ -64,7 +64,7 @@ node dist/app.js
 Naviguez vers le dossier du front-end dans un autre terminal ou onglet, puis exécutez :
 
 ```bash
-cd Hackaton-Front
+cd Hackathon-Front
 npm install  # Pour installer les dépendances du front-end
 npm run dev  # Pour démarrer le serveur de développement du front-end
 ```
