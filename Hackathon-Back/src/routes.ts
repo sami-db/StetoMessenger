@@ -323,7 +323,7 @@ router.get("/api/getPatientByProId/:id", async (req, res) => {
 
     // Prepares and executes the query
     const [messages] = await connection.query(
-      "SELECT patient.id, patient.firstname, patient.lastname, patient.email, careteam.id as careteamId FROM Practitioner JOIN CareTeamParticipant ON Practitioner.id = CareTeamParticipant.memberId JOIN CareTeam ON CareTeamParticipant.careTeamId = CareTeam.id JOIN Patient ON CareTeam.subjectId = Patient.id WHERE Practitioner.id = " + req.params.id);  
+      "select patient.id, patient.firstname, patient.lastname, patient.email, careteam.id as careteamid from practitioner join careteamparticipant on practitioner.id = careteamparticipant.memberid join careteam on careteamparticipant.careteamid = careteam.id join patient on careteam.subjectid = patient.id where practitioner.id = " + req.params.id);
     // await connection.query(sql, [proId]);
 
     // Closes the connection
